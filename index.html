@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eferro • Proyectos</title>
+  <meta name="description" content="Índice de proyectos y aplicaciones de eferro">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Proyectos de eferro</h1>
+      <p class="subtitle">Índice rápido de mis aplicaciones y sitio web.</p>
+    </header>
+
+    <nav class="links">
+      <a class="card" href="https://eferro.github.io/eferro-picks-site/" target="_blank" rel="noopener noreferrer">
+        <span class="card-title">eferro Picks</span>
+        <span class="card-desc">Links y recomendaciones seleccionadas</span>
+      </a>
+      <a class="card" href="https://eferro.github.io/simplecalendar/" target="_blank" rel="noopener noreferrer">
+        <span class="card-title">SimpleCalendar</span>
+        <span class="card-desc">Calendario simple y minimalista</span>
+      </a>
+      <a class="card" href="https://eferro.github.io/focus/" target="_blank" rel="noopener noreferrer">
+        <span class="card-title">Focus</span>
+        <span class="card-desc">Pomodoro / enfoque sin distracciones</span>
+      </a>
+      <a class="card" href="https://www.eferro.net/" target="_blank" rel="noopener noreferrer">
+        <span class="card-title">Blog / Web personal</span>
+        <span class="card-desc">eferro.net</span>
+      </a>
+    </nav>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> eferro. Hecho con HTML y CSS.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  
+</body>
+</html>
+
+
+
