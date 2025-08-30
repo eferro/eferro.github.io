@@ -1,29 +1,29 @@
-# eferro - Índice de proyectos
+# eferro - Projects index
 
-Este repositorio contiene una página HTML estática que sirve como índice hacia varios proyectos y el sitio personal de eferro.
+This repository contains a static HTML page that serves as an index to various projects and eferro's personal site.
 
-## Enlaces
+## Links
 
 - eferro Picks: https://eferro.github.io/eferro-picks-site/
 - SimpleCalendar: https://eferro.github.io/simplecalendar/
 - Focus: https://eferro.github.io/focus/
-- Web personal: https://www.eferro.net/
+- Personal website: https://www.eferro.net/
 
-## Despliegue en GitHub Pages
+## GitHub Pages deployment
 
-1. Crea el repositorio en GitHub (público) y súbelo con estos archivos: `index.html` y `style.css` (opcionalmente `README.md`).
-2. En GitHub, ve a Settings → Pages.
-3. En "Build and deployment", selecciona:
+1. Create a public repository on GitHub and push these files: `index.html` and `style.css` (optionally `README.md`).
+2. In GitHub, go to Settings → Pages.
+3. In "Build and deployment", select:
    - Source: "Deploy from a branch"
-   - Branch: `main` y carpeta `/ (root)`
-4. Guarda los cambios. GitHub generará la página en unos minutos.
-5. La URL será `https://<tu-usuario>.github.io/<repo>/` si es un proyecto, o `https://<tu-usuario>.github.io/` si usas el repositorio especial `<tu-usuario>.github.io`.
+   - Branch: `main` and folder `/ (root)`
+4. Save the changes. GitHub will generate the page in a few minutes.
+5. The URL will be `https://<your-username>.github.io/<repo>/` if it's a project, or `https://<your-username>.github.io/` if you use the special `<your-username>.github.io` repository.
 
-## Desarrollo local
+## Local development
 
-Abre `index.html` en el navegador. No requiere servidor.
+Open `index.html` in the browser. It doesn't require a server.
 
-## Licencia
+## License
 
 MIT
 
