@@ -1,0 +1,21 @@
+# IDE and Editor Configuration
+.cursorindexingignore
+.cursor/
+.vscode/
+
+# Development Tools
+.specstory/
+
+# OS Generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
