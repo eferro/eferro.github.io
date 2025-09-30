@@ -74,6 +74,7 @@ body {
   position: relative;
   box-shadow: 0 8px 20px var(--shadow);
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+  margin-bottom: 16px;
 }
 
 .card a {
