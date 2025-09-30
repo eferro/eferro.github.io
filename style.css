@@ -49,7 +49,7 @@ body {
 .links {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 16px;
+  gap: 24px;
 }
 
 @media (min-width: 640px) {
@@ -76,6 +76,14 @@ body {
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
 }
 
+.card a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .card:hover {
   transform: translateY(-2px);
   border-color: color-mix(in oklab, var(--accent) 60%, var(--border));
@@ -97,6 +105,28 @@ body {
   margin-top: 40px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.github-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+  display: block;
+}
+
+.github-link:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+.github-link.private {
+  color: var(--muted);
+}
+
+.github-link.private:hover {
+  color: var(--text);
 }
 
 
