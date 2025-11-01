@@ -13,6 +13,7 @@
 <body>
   <main class="container">
     <header class="header">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">Toggle theme</button>
       <h1 class="title">eferro Projects</h1>
       <p class="subtitle">Quick index of my apps and website.</p>
     </header>
@@ -123,9 +124,51 @@
   </main>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const storedTheme = window.localStorage.getItem('theme');
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemPrefersDark = mediaQuery.matches;
+
+    const applyTheme = (theme) => {
+      root.dataset.theme = theme;
+      if (themeToggle) {
+        const isDark = theme === 'dark';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+        themeToggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      }
+    };
+
+    const currentTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
+    applyTheme(currentTheme);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        window.localStorage.setItem('theme', nextTheme);
+        applyTheme(nextTheme);
+      });
+    }
+
+    const handlePreferenceChange = (event) => {
+      if (!window.localStorage.getItem('theme')) {
+        applyTheme(event.matches ? 'dark' : 'light');
+      }
+    };
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', handlePreferenceChange);
+    } else if (typeof mediaQuery.addListener === 'function') {
+      mediaQuery.addListener(handlePreferenceChange);
+    }
   </script>
-  
+
 </body>
 </html>
 
