@@ -9,6 +9,17 @@
   --shadow: rgba(0, 0, 0, 0.25);
 }
 
+:root[data-theme="light"] {
+  --bg: #f5f7ff;
+  --panel: #ffffff;
+  --text: #1a233a;
+  --muted: #5b6280;
+  --accent: #2f58ff;
+  --accent-2: #0946c5;
+  --border: #d7dcf5;
+  --shadow: rgba(15, 23, 42, 0.16);
+}
+
 * { box-sizing: border-box; }
 
 html, body { height: 100%; }
@@ -19,6 +30,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  transition: background 180ms ease, color 180ms ease;
 }
 
 .container {
@@ -30,6 +42,8 @@ body {
 .header {
   text-align: center;
   margin-bottom: 28px;
+  position: relative;
+  padding-top: 16px;
 }
 
 .title {
@@ -42,6 +56,33 @@ body {
 .subtitle {
   margin: 0;
   color: var(--muted);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 16px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 24px var(--shadow);
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease, color 160ms ease;
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--accent) 14%, var(--panel));
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--border));
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .links {
